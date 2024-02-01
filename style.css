@@ -19,6 +19,7 @@
   --fw-six: 600;
   --fw-seven: 700;
   --fw-eight: 800;
+  --fw-nine: 900;
 
   /*~~~~~~MARGIN & PADDING~~~~~~ */
   --marg: 2.85rem 0;
@@ -431,8 +432,8 @@ header {
 }
 
 .product1 .pro .cart:hover {
- background: var(--primary-colr);
- color: var(--white-colr);
+  background: var(--primary-colr);
+  color: var(--white-colr);
 }
 
 .product1 .pro-container {
@@ -485,4 +486,125 @@ header {
 .btn-default:hover {
   background: var(--primary-colr);
   color: var(--white-colr);
+}
+
+/*~~~~~~BANNER~~~~~~ */
+
+.sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: url("img/men.png");
+  min-width: 580px;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+}
+
+.sm-banner .banner-box:nth-child(2) {
+  background: url(img/b17.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 580px;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+}
+
+.sm-banner h4 {
+  color: var(--white-colr);
+  font-size: 1.25rem;
+  font-weight: var(--fw-three);
+}
+
+.sm-banner h2 {
+  color: var(--white-colr);
+  font-size: 1.75rem;
+  font-weight: var(--fw-eight);
+}
+
+.sm-banner span {
+  color: var(--white-colr);
+  font-size: 14px;
+  font-weight: var(--fw-five);
+  padding-bottom: 15px;
+}
+
+.banner-btn {
+  font-size: 13px;
+  font-weight: var(--fw-six);
+  padding: 11px 18px;
+  color: var(--white-colr);
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid var(--white-colr);
+  outline: none;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.sm-banner .banner-box:hover a {
+  background: var(--primary-colr);
+  border: 1px solid var(--primary-colr);
+}
+
+/*~~~~~~BANNER-2~~~~~~ */
+
+.banner-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  flex-wrap: wrap;
+}
+
+.banner-2 .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: url("img/b-3.png");
+  min-width: 30%;
+  height: 30vh;
+  background-position: center;
+  overflow: hidden;
+  background-size: cover;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.banner-2 h2 {
+  color: var(--white-colr);
+  font-weight: var(--fw-nine);
+  width: 100%;
+  font-size: 22px;
+}
+
+.banner-2 h3 {
+  color: hsl(39, 100%, 55%);
+  font-weight: var(--fw-eight);
+  font-size: 15px;
+}
+
+.banner-2 .banner-box2 {
+  background: url("img/trousers.png");
+}
+
+.banner-2 .banner-box3 {
+  background: url("img/b-2.png");
+}
+
+.banner-2 .banner-box:hover {
+  transform: translateY(-7px);
 }
