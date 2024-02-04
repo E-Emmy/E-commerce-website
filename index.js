@@ -26,3 +26,22 @@ for (let i = 1; i <= 3; i++) {
     window.location.href = targetURLs[i - 1];
   });
 }
+
+const bar = document.getElementById("bar");
+const close = document.getElementById("close");
+const nav = document.getElementById("navbar");
+
+//--~~~~~~ SHOW MENU~~~~~~//
+
+if (bar) {
+  bar.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
+}
+//--~~~~~~ MENU HIDDEN~~~~~~//
+
+if (close) {
+  close.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+}

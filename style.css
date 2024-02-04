@@ -128,6 +128,7 @@ header {
   top: 0;
   left: 0;
 }
+/*~~~~~~NAV~~~~~~ */
 
 .navbar {
   display: flex;
@@ -173,6 +174,12 @@ header {
   height: 0.3rem;
   background-color: var(--primary-colr);
   border-radius: 50%;
+}
+
+.close,
+.nav-toggle {
+  display: none;
+  align-items: center;
 }
 
 /*~~~~~~HOME~~~~~~ */
@@ -605,7 +612,6 @@ header {
   font-size: 22px;
 }
 
-
 .banner-2 h3 {
   color: hsl(39, 100%, 55%);
   font-weight: var(--fw-eight);
@@ -649,13 +655,12 @@ header {
   color: hsl(240, 2%, 38%);
 }
 
-
 .nl span {
   color: hsl(39, 100%, 55%);
 }
 
 .nl input {
-  height: 3.125rem;
+  height: 4rem;
   padding: 0 1.25em;
   font-size: 14px;
   width: 100%;
@@ -674,7 +679,134 @@ header {
   border-bottom-left-radius: 0;
 }
 
+.nl .btn-default:hover {
+  opacity: 0.8;
+}
+
+.arrow {
+  font-size: 30px;
+}
+
 .nl .form {
   display: flex;
   width: 48%;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--primary-colr);
+}
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+footer .follow i:hover {
+  color: var(--primary-colr);
+  transform: translateY(-5px);
+}
+
+footer .install .row img {
+  border: 1px solid var(--primary-colr);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+  cursor: pointer;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 799px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background: var(--bg-colr);
+    z-index: 999;
+    box-shadow: 0 2.5rem 3.75rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem 0 0 1rem;
+    padding: 5rem 0 0 1.6rem;
+    transition: 0.3s;
+  }
+
+  .navbar li {
+    margin-bottom: 25px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+  }
+  .navbar.active {
+    right: 0px;
+  }
+  .nav-toggle i {
+    color: var(--black-colr);
+    font-size: 1.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: var(--black-colr);
+    font-size: 24px;
+    display: initial;
+  }
+
+  .cart-icon {
+    display: none;
+  }
 }

@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--~~~~~~ HEADER ICON ~~~~~~-->
-
     <link rel="icon" href="img/store.png" />
+
+    <!--~~~~~~ICONS8 ~~~~~~-->
 
     <!--~~~~~~BOXICONS~~~~~~-->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!--~~~~~~ LINE ICONS ~~~~~~-->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <!--~~~~~~ CSS ~~~~~~-->
     <link rel="stylesheet" href="style.css" />
-
-    <!--~~~~~~ TITLE  ~~~~~~-->
-
+    <!--~~~~~~HEADER  TITLE  ~~~~~~-->
     <title>SHOPIFY</title>
   </head>
   <body>
     <!--~~~~~~ HEADER ~~~~~~-->
     <header id="header">
-      <!--header logo-->
+      <!--nav logo-->
       <a href="#" class="logo">SHOP<span class="logo-text">Ї</span>FY</a>
-      <div>
+
+      <div class="nav-menu" id="nav-menu">
         <!--nav list-->
         <ul class="navbar" id="navbar">
           <li><a href="index.html" class="nav-link active-link">Home</a></li>
@@ -35,9 +37,18 @@
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
           <li>
-            <a href="cart.html"><i class="bx bx-shopping-bag"></i></a>
+            <!--cart btn-->
+            <a href="cart.html"
+              ><i id="cart-icon" class="bx bx-shopping-bag cart-icon"></i
+            ></a>
           </li>
+          <a href="#"> <i id="close" class="bx bx-x close"></i></a>
         </ul>
+      </div>
+      <!--toggle btn-->
+      <div class="nav-toggle" id="nav-toggle">
+        <a href="cart.html"><i class="bx bx-shopping-bag"></i></a>
+        <i class="lni lni-grid-alt" id="bar"></i>
       </div>
     </header>
 
@@ -500,12 +511,14 @@
         </p>
       </div>
       <div class="form">
-        <input type="text" placeholder="your email address" />
-        <a href="#" class="btn-default">Sign Up</a>
+        <input type="text" placeholder="Enter your email" />
+        <a href="#" class="btn-default"
+          ><i class="lni lni-arrow-right arrow"></i
+        ></a>
       </div>
     </section>
 
-    <!--~~~~~~FOOTER~~~~~~-->
+    <!-- ~~~~~~FOOTER~~~~~~ -->
     <footer class="footer padd15">
       <div class="col">
         <a href="#" class="logo">SHOP<span class="logo-text">Ї</span>FY</a>
@@ -513,8 +526,52 @@
         <p><strong>Address: </strong></p>
         Ethical emmy Road,Street 105.Isara.
         <p><strong>Phone:</strong>+2348107210553</p>
+        <p><strong>Work Hours:</strong>24/7hrs Support,Mon/Fri</p>
+        <div class="follow">
+          <h4>Follow us on</h4>
+          <div class="icon">
+            <i class="lni lni-facebook-fill"></i>
+            <i class="lni lni-twitter-original"></i>
+            <i class="lni lni-whatsapp"></i>
+            <i class="lni lni-instagram-fill"></i>
+          </div>
+        </div>
+      </div>
 
-        <p><strong>Work Hours:</strong>8:00am-12:00am,Mon/Fri</p>
+      <div class="col">
+        <h4>ABOUT SHOPIFY</h4>
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Terms & Condition</a>
+        <a href="#">Flash Sales</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>MY ACCOUNT</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img class src="img/app.jpg" />
+
+          <img src="img/play.jpg" />
+        </div>
+
+        <p>PAYMENT METHODS & DELIVERY PARTNERS</p>
+        <img src="img/pay.png" />
+      </div>
+
+      <div class="copyright">
+        <p>&copy;2024, Ethical Emmy</p>
       </div>
     </footer>
 
