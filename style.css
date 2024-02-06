@@ -289,7 +289,7 @@ header {
 }
 
 /*~~~~~~HIGHLIGHT~~~~~~ */
-
+.highlight2,
 .highlight {
   display: flex;
   justify-content: space-between;
@@ -297,6 +297,7 @@ header {
   flex-wrap: wrap;
 }
 
+.highlight2 .highlight-box2,
 .highlight .highlight-box {
   text-align: center;
   width: 11.25rem;
@@ -315,6 +316,7 @@ header {
   transition-property: transform;
 }
 
+.highlight2 .highlight-box2:before,
 .highlight .highlight-box:before {
   pointer-events: none;
   position: absolute;
@@ -342,13 +344,16 @@ header {
   -webkit-transition-property: transform, opacity;
   transition-property: transform, opacity;
 }
+
+.highlight2 .highlight-box2:hover,
 .highlight .highlight-box:hover,
 .highlight .highlight-box:focus,
 .highlight .highlight-box:active {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
-  /* move the element up by 5px */
 }
+
+.highlight2 .highlight-box2:hover:before,
 .highlight .highlight-box:hover:before,
 .highlight .highlight-box:focus:before,
 .highlight .highlight-box:active:before {
@@ -357,11 +362,13 @@ header {
   transform: translateY(5px);
 }
 
+.highlight2 .highlight-box2 img,
 .highlight .highlight-box img {
   width: 100%;
   margin-bottom: 10px;
 }
 
+.highlight2 .highlight-box2 h6,
 .highlight .highlight-box h6 {
   padding: 9px 8px 6px 8px;
   line-height: 1;
@@ -761,7 +768,8 @@ footer .copyright {
   text-align: center;
 }
 
-/*~~~~~~ SHOP~~~~~~*/
+/*~~~~~~ SHOP & SNEAKERS~~~~~~*/
+.sneakers,
 .shop {
   background: url("banner/b8.jpg");
   background-size: cover;
@@ -774,9 +782,15 @@ footer .copyright {
   padding: 14px;
 }
 
+.sneakers {
+  background: url("women/Banner-1.jpeg");
+  background-size: cover;
+}
+
 .shop p,
 .shop h2 {
   color: var(--white-colr);
+  font-weight: var(--white-colr);
 }
 
 .pagination {
@@ -801,6 +815,79 @@ footer .copyright {
   opacity: 0.8;
 }
 
+/*~~~~~~ SINGLE PRODUCT~~~~~~ */
+.prodetails .single-pro-image {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+.prodetails {
+  display: flex;
+  margin-top: 1.25rem;
+}
+.prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+.prodetails .single-pro-details h4 {
+  padding: 2.5rem 0 1.25rem 0;
+}
+
+.prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+.prodetails .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.prodetails .single-pro-details input:focus {
+  outline: none;
+}
+.prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+.prodetails .single-pro-details .btn-default {
+  background: var(--primary-colr);
+  color: var(--white-colr);
+}
+
+.prodetails .single-pro-details .btn-default:hover {
+  background: hsl(210, 60%, 38%);
+}
+
+.prodetails .single-pro-details h6 {
+  font-size: 1.25rem;
+}
+
+.prodetails .single-pro-details h6 a {
+  text-decoration: none;
+}
+.prodetails .single-pro-details h6 a:hover {
+text-decoration: underline;
+}
 /*~~~~~~ MEDIA QUERIES~~~~~~ */
 
 @media only screen and (max-width: 799px) {
@@ -827,6 +914,10 @@ footer .copyright {
 
   .navbar li {
     margin-bottom: 25px;
+  }
+
+  #bar {
+    cursor: pointer;
   }
 
   .nav-toggle {
@@ -878,7 +969,7 @@ footer .copyright {
   }
 
   .banner {
-    height: 20vh;
+    height: 50vh;
   }
   .sm-banner .banner-box:nth-child(2),
   .sm-banner .banner-box {
@@ -964,4 +1055,19 @@ footer .copyright {
   footer .copyright {
     text-align: start;
   }
+
+  .prodetails {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prodetails .single-pro-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .prodetails .single-pro-details {
+    width: 100%;
+  }
+ 
 }
