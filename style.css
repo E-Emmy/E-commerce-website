@@ -769,6 +769,7 @@ footer .copyright {
 }
 
 /*~~~~~~ SHOP & SNEAKERS~~~~~~*/
+.blog,
 .sneakers,
 .shop {
   background: url("banner/b8.jpg");
@@ -787,10 +788,15 @@ footer .copyright {
   background-size: cover;
 }
 
-.shop p,
+.blog p,
+.shop p {
+  color: var(--white-colr);
+}
+
+.blog h2,
 .shop h2 {
   color: var(--white-colr);
-  font-weight: var(--white-colr);
+  font-weight: var(--fw-seven);
 }
 
 .pagination {
@@ -819,6 +825,10 @@ footer .copyright {
 .prodetails .single-pro-image {
   width: 40%;
   margin-right: 50px;
+}
+
+.prodetails .single-pro-image img {
+  border-radius: 4px;
 }
 
 .small-img-group {
@@ -884,16 +894,135 @@ footer .copyright {
 
 .prodetails .single-pro-details h6 a {
   text-decoration: none;
+  color: var(--primary-colr);
 }
 .prodetails .single-pro-details h6 a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
+.prodetails .single-pro-details h1 {
+  font-size: 2rem;
+}
+
+/*~~~~~~ BLOG~~~~~~ */
+.blog {
+  background: url("banner/b9.jpg");
+  background-size: cover;
+}
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-heading span {
+  color: var(--primary-colr);
+}
+
+.blog-heading h3 {
+  font-size: 2.4rem;
+  font-weight: var(--fw-six);
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25rem 0px;
+  flex-wrap: wrap;
+}
+
+.blog-box {
+  width: 350px;
+  background: var(--white-colr);
+  border: 1px solid hsl(0, 0%, 93%);
+  margin: 1.25rem 1.25rem;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+}
+
+.blog-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: var(--primary-colr);
+  font-size: 0.9rem;
+  font-weight: var(--fw-six);
+}
+
+.blog-text .blog-title {
+  font-size: 1.3rem;
+  font-weight: var(--fw-seven);
+  color: var(--gray-colr);
+  line-height: normal;
+  padding: 10px 0;
+}
+
+.blog-text p {
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 1.25rem 0px;
+}
+
+.blog-text a {
+  color: var(--black-colr);
+  transition: 0.3s ease-in;
+  text-decoration: none;
+  position: relative;
+}
+
+.blog-text a:hover {
+  color: var(--primary-colr);
+}
+
+.blog-text a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: var(--black-colr);
+  position: absolute;
+  top: 10px;
+  right:130px;
+}
+
+
 /*~~~~~~ MEDIA QUERIES~~~~~~ */
+/*~~~~~~ MEDIA QUERIES FOR 799PX~~~~~~ */
 
 @media only screen and (max-width: 799px) {
   .padd15 {
     padding: 2.5rem 2.5rem;
   }
+
   .navbar {
     display: flex;
     flex-direction: column;
@@ -952,10 +1081,12 @@ text-decoration: underline;
     background-position: top 30% right 30%;
   }
 
+  .highlight2,
   .highlight {
     justify-content: center;
   }
 
+  .highlight2 .highlight-box2,
   .highlight .highlight-box {
     margin: 15px 15px;
   }
@@ -991,7 +1122,12 @@ text-decoration: underline;
     width: 70%;
     padding-top: 1.25rem;
   }
+  .blog-box {
+    width: 70%;
+  }
 }
+
+/*~~~~~~ MEDIA QUERIES FOR 477PX~~~~~~ */
 
 @media only screen and (max-width: 477px) {
   header {
@@ -1001,10 +1137,12 @@ text-decoration: underline;
     padding: 1.25rem;
   }
 
+  .highlight2 .highlight-box2,
   .highlight .highlight-box {
     width: 155px;
     margin: 0 0 15px 0;
   }
+  .highlight2,
   .highlight {
     justify-content: space-between;
   }
@@ -1069,5 +1207,15 @@ text-decoration: underline;
   .prodetails .single-pro-details {
     width: 100%;
   }
- 
+  .blog-box {
+    margin: 20px 10px;
+    width: 100%;
+  }
+  .blog {
+    padding: 20px;
+  }
+  .blog-text a::after {
+    top: 10px;
+    right:3.75rem;
+  }
 }
