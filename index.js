@@ -52,3 +52,12 @@ if (close) {
     nav.classList.remove("active");
   });
 }
+
+
+const heartIcons = document.querySelectorAll('.fa-heart');
+
+heartIcons.forEach(heartIcon => {
+  heartIcon.addEventListener('click', () => {
+    heartIcon.classList.toggle('fas');
+  });
+});

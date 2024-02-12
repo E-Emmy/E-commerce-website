@@ -30,7 +30,7 @@
   --gray-colr: hsl(255, 4%, 35%);
   --text-colr: hsl(0, 0%, 13%);
   --white-colr: hsl(0, 0%, 100%);
-  --primary-colr: /* hsl(6, 89%, 66%) */ hsl(203, 39%, 57%);
+  --primary-colr: /* hsl(3, 96%, 71%) */ #22b2b7;
   --bg-colr: hsl(252, 30%, 92%);
 }
 
@@ -124,7 +124,6 @@ header {
   background-color: var(--bg-colr);
   z-index: 999;
   position: sticky;
-
   top: 0;
   left: 0;
 }
@@ -644,7 +643,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-image: url(banner/b7.png);
+  background-image: url(banner/bb.jpg);
   background-repeat: no-repeat;
   background-position: 20% 30%;
   background-color: hsl(215, 89%, 14%);
@@ -680,7 +679,7 @@ header {
 
 .nl .btn-default {
   white-space: nowrap;
-  background: hsl(203, 39%, 57%);
+  background: var(--primary-colr);
   color: var(--white-colr);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -741,7 +740,7 @@ footer .follow {
 }
 
 footer .follow i {
-  color: #465b52;
+  color: var(--black-colr);
   padding-right: 4px;
   cursor: pointer;
   transition: 0.3s;
@@ -769,6 +768,8 @@ footer .copyright {
 }
 
 /*~~~~~~ SHOP & SNEAKERS~~~~~~*/
+.contact,
+.about,
 .blog,
 .sneakers,
 .shop {
@@ -788,15 +789,20 @@ footer .copyright {
   background-size: cover;
 }
 
+.contact p,
+.about p,
 .blog p,
 .shop p {
   color: var(--white-colr);
 }
 
+.contact h2,
+.about h2,
 .blog h2,
 .shop h2 {
   color: var(--white-colr);
   font-weight: var(--fw-seven);
+  margin-bottom: 10px;
 }
 
 .pagination {
@@ -885,7 +891,7 @@ footer .copyright {
 }
 
 .prodetails .single-pro-details .btn-default:hover {
-  background: hsl(210, 60%, 38%);
+  opacity: 0.7;
 }
 
 .prodetails .single-pro-details h6 {
@@ -898,6 +904,7 @@ footer .copyright {
 }
 .prodetails .single-pro-details h6 a:hover {
   text-decoration: underline;
+  opacity: 0.7;
 }
 .prodetails .single-pro-details h1 {
   font-size: 2rem;
@@ -948,6 +955,10 @@ footer .copyright {
   background: var(--white-colr);
   border: 1px solid hsl(0, 0%, 93%);
   margin: 1.25rem 1.25rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 5px solid white;
+  border-radius: 5px;
 }
 
 .blog-img {
@@ -960,13 +971,13 @@ footer .copyright {
   height: 300px;
   object-fit: cover;
   object-position: center;
-  vertical-align: middle;
 }
 
 .blog-text {
   padding: 30px;
   display: flex;
   flex-direction: column;
+  width: 340px;
 }
 
 .blog-text span {
@@ -980,6 +991,8 @@ footer .copyright {
   font-weight: var(--fw-seven);
   color: var(--gray-colr);
   line-height: normal;
+  transition: 0.3s;
+  cursor: pointer;
   padding: 10px 0;
 }
 
@@ -1011,13 +1024,231 @@ footer .copyright {
   background: var(--black-colr);
   position: absolute;
   top: 10px;
-  right:130px;
+  right: 130px;
+}
+.blog-text .blog-title:hover {
+  color: var(--primary-colr);
 }
 
+/*~~~~~~ ABOUT~~~~~~ */
+.contact,
+.about {
+  background: url("banner/b10.png");
+  background-size: cover;
+}
+
+.about-head img {
+  width: 50%;
+  height: auto;
+}
+
+.about-head {
+  display: flex;
+  justify-content: center;
+}
+
+.about-head > div {
+  padding: 2.5rem;
+}
+
+.about-head > div h2 {
+  padding: 10px;
+}
+.ab {
+  margin-top: 300px;
+}
+.about-app {
+  text-align: center;
+}
+
+.about-app .video {
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
+}
+
+.about-app .video video {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.25rem;
+}
+.about-app h1 a {
+  color: var(--primary-colr);
+  text-decoration: none;
+}
+.shopi {
+  color: var(--primary-colr);
+}
+
+.about-app h1 a:hover {
+  text-decoration: underline;
+}
+
+/*~~~~~~ CONTACT~~~~~~ */
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-details .details {
+  width: 40%;
+}
+
+.contact-details .details span,
+.form-details form span {
+  font-size: 12px;
+}
+
+.contact-details .details h2,
+.form-details h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 1.25rem 0;
+}
+
+.contact-details .details h3 {
+  font-size: 1rem;
+  padding-bottom: 15px;
+}
+
+.contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+
+.contact-details .details li i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+
+.contact-details .details li p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-details .map {
+  width: 55%;
+  height: 25rem;
+}
+
+.contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-details form input,
+.form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e1e1e1;
+  resize: none;
+}
+
+.form-details form a {
+  background: var(--primary-colr);
+  color: var(--white-colr);
+}
+
+.form-details form a:hover {
+  opacity: 0.7;
+}
+
+.form-details .people div {
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+.form-details {
+  display: flex;
+  margin: 1.875rem;
+  justify-content: space-between;
+  padding: 5rem;
+  border: 1px solid hsl(0, 12%, 83%);
+}
+
+.form-details .people div img {
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.form-details .people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.form-details .people div p span {
+  display: block;
+  font-size: 1rem;
+  font-weight: var(--fw-six);
+  color: var(--black-colr);
+}
+
+.fa-heart {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.fa-heart.fas {
+  color: var(--primary-colr);
+}
 
 /*~~~~~~ MEDIA QUERIES~~~~~~ */
-/*~~~~~~ MEDIA QUERIES FOR 799PX~~~~~~ */
+/*~~~~~~ MEDIA QUERIES FOR 992PX~~~~~~ */
+@media only screen and (max-width: 992px) {
+  .home {
+    height: 90vh;
+    padding: 0 5rem;
+    background-position: top 30% right 30%;
+  }
+  .highlight2,
+  .highlight {
+    justify-content: flex-start;
+    gap: 25px;
+  }
 
+  .product1 .pro-container {
+    justify-content: flex-start;
+    padding-top: 20px;
+    gap: 25px;
+  }
+
+  .sm-banner .banner-box:nth-child(2),
+  .sm-banner .banner-box {
+    min-width: 100%;
+    margin-top: 10px;
+    height: 40vh;
+  }
+
+  .nl .form {
+    width: 70%;
+    padding-top: 1.25rem;
+  }
+
+  .banner-2 .banner-box,
+  .banner-2 .banner-box2 {
+    min-width: 100%;
+  }
+  .people div {
+    padding-left:  2.5rem;
+  }
+}
+
+/*~~~~~~ MEDIA QUERIES FOR 799PX~~~~~~ */
 @media only screen and (max-width: 799px) {
   .padd15 {
     padding: 2.5rem 2.5rem;
@@ -1125,6 +1356,25 @@ footer .copyright {
   .blog-box {
     width: 70%;
   }
+  .about-head img {
+    width: 100%;
+  }
+  .about-head {
+    flex-direction: column;
+  }
+  .about-head > div p {
+    font-size: 25px;
+  }
+
+  .form-details {
+    padding: 2.5rem;
+  }
+  .form-details form {
+    width: 50%;
+  }
+  .people div {
+    padding-left: 2.5rem;
+  }
 }
 
 /*~~~~~~ MEDIA QUERIES FOR 477PX~~~~~~ */
@@ -1216,6 +1466,48 @@ footer .copyright {
   }
   .blog-text a::after {
     top: 10px;
-    right:3.75rem;
+    right: 3.75rem;
+  }
+  .about-head {
+    flex-direction: column;
+  }
+
+  .about-head img {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+  .about-head > div {
+    padding-left: 0px;
+  }
+
+  .about-head > div p {
+    font-size: 1.25rem;
+    width: 300px;
+  }
+  .about-app .video {
+    width: 100%;
+  }
+  .contact-details {
+    flex-direction: column;
+  }
+
+  .contact-details .details {
+    width: 100%;
+    margin: bottom 1.875rem;
+  }
+
+  .contact-details .map {
+    width: 100%;
+  }
+
+  .form-details {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+
+  .form-details form {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
